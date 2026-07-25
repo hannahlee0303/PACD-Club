@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PACD Research Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container breadcrumb">
+        <img class="breadcrumb-logo" src="assets/clublogo.png" alt="PACD Research Club logo" />
+        <span class="breadcrumb-text">You are here: Home >> Scientific Research</span>
+        <a class="panel-link breadcrumb-action" href="my-application.html">My application</a>
+      </div>
+    </header>
+
+    <main class="container page-main">
+      <section class="hero">
+        <div class="hero-left">
+          <h1 id="club-title">PACD Research Club</h1>
+          <p id="club-background"></p>
+          <ul id="club-statement" class="statement-list"></ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#section-grid">Explore Sections</a>
+            <button class="btn btn-outline" id="open-join-modal" type="button">Join Us</button>
+          </div>
+          <p class="source-note" id="club-source"></p>
+        </div>
+        <div class="hero-right">
+          <img id="hero-image" class="hero-logo" alt="PACD group" />
+        </div>
+      </section>
+
+      <section class="founders" id="founders-block">
+        <div class="section-headline-row">
+          <h2>Co-Founders</h2>
+        </div>
+        <div class="founder-grid" id="founder-grid"></div>
+      </section>
+
+      <section class="help-surveys" id="help-surveys">
+        <div class="section-headline-row">
+          <h2>Help us with this survey!</h2>
+        </div>
+        <div id="help-surveys-grid"></div>
+      </section>
+
+      <section class="section-grid" id="section-grid">
+        <article class="panel" data-type="frontier">
+          <div class="panel-header">
+            <h3>Frontier Literature on PACD</h3>
+            <a class="panel-link" href="section.html?type=frontier">View all</a>
+          </div>
+          <div class="panel-content">
+            <a class="featured-card" id="frontier-featured" href="section.html?type=frontier"></a>
+            <div class="rolling-list" id="frontier-list"></div>
+          </div>
+        </article>
+
+        <article class="panel" data-type="results">
+          <div class="panel-header">
+            <h3>Club members latest publications</h3>
+            <a class="panel-link" href="section.html?type=results">View all</a>
+          </div>
+          <div class="panel-content">
+            <a class="featured-card" id="results-featured" href="section.html?type=results"></a>
+            <div class="rolling-list" id="results-list"></div>
+          </div>
+        </article>
+
+        <article class="panel" data-type="questionnaires">
+          <div class="panel-header">
+            <h3>Recent Research Questionnaire Entry</h3>
+            <a class="panel-link" href="section.html?type=questionnaires">View all</a>
+          </div>
+          <div class="panel-content">
+            <a class="featured-card" id="questionnaires-featured" href="section.html?type=questionnaires"></a>
+            <div class="rolling-list" id="questionnaires-list"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="join-card">
+        <div>
+          <h3>Join PACD Research Club</h3>
+          <p>
+            Clinicians, researchers, public health experts, and industry partners are all welcome.
+            Submit your application and track its status through a secure email sign-in link.
+          </p>
+        </div>
+        <div class="inline-form">
+          <a class="btn btn-outline" href="my-application.html">Track application</a>
+          <button class="btn btn-primary" id="open-join-modal-secondary" type="button">Apply Now</button>
+        </div>
+      </section>
+    </main>
+
+    <aside class="activity-pop" id="activity-pop">
+      <div class="activity-title">Live Join Us Updates</div>
+      <div class="activity-body" id="activity-body">No updates yet.</div>
+    </aside>
+
+    <dialog id="join-dialog">
+      <form id="join-form" method="dialog" class="join-form">
+        <h3>Join Us Application</h3>
+        <div class="form-grid">
+          <label>Full name<input name="name" autocomplete="name" required /></label>
+          <label>Professional role<input name="professionalRole" placeholder="e.g. glaucoma specialist" required /></label>
+          <label>Institution<input name="institution" autocomplete="organization" required /></label>
+          <label>Country / region<input name="countryRegion" autocomplete="country-name" required /></label>
+          <label class="span-2">Institutional email<input name="email" type="email" autocomplete="email" required /></label>
+          <fieldset class="span-2 application-interests">
+            <legend>Collaboration interests</legend>
+            <div class="interest-grid">
+              <label><input name="interests" type="checkbox" value="Multicentre clinical research" /> Multicentre clinical research</label>
+              <label><input name="interests" type="checkbox" value="Anterior-segment imaging" /> Anterior-segment imaging</label>
+              <label><input name="interests" type="checkbox" value="Data science and AI" /> Data science and AI</label>
+              <label><input name="interests" type="checkbox" value="Screening and public health" /> Screening and public health</label>
+            </div>
+          </fieldset>
+          <label class="span-2">Proposed contribution or collaboration idea<textarea name="proposal" rows="5" minlength="20" maxlength="5000" required></textarea></label>
+          <label class="span-2">CV (optional PDF, maximum 10 MB)<input name="cv" type="file" accept="application/pdf,.pdf" /></label>
+        </div>
+        <div class="dialog-actions">
+          <button type="button" class="btn btn-outline" id="close-join-modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <p class="privacy-note">
+          Your application is stored privately and used only for collaboration
+          review and contact. Read our <a class="panel-link" href="privacy.html">privacy notice</a>.
+        </p>
+      </form>
+    </dialog>
+
+    <dialog id="result-dialog">
+      <div class="result-box">
+        <h3>Application Submitted</h3>
+        <p id="result-text"></p>
+        <p class="result-note">
+          Use the secure link sent to your email to view your application status.
+        </p>
+        <button class="btn btn-primary" id="close-result" type="button">Close</button>
+      </div>
+    </dialog>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
