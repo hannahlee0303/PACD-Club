@@ -20,9 +20,5 @@ additional_redirect_urls = [
 ]
 enable_anonymous_sign_ins = true
 
-[storage]
-enabled = true
-file_size_limit = "10MiB"
-
 [functions.application-email]
 verify_jwt = true
